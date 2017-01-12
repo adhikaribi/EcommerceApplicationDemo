@@ -49,8 +49,6 @@ namespace Infrastructure.Data
             result.path = product.path;
             result.price = product.price;
             result.productId = product.productId;
-            //products.Remove(result);
-           // products.Add(product);
             return 1;
         }
     }

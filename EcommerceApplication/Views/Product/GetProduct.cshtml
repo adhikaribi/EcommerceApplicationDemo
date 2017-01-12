@@ -9,6 +9,7 @@
                 <form method="post" action="~/Product/Update">
                     <p>Name : <input type="text" class="form-control" id="pname" name="name" value="@Model.name" /></p>
                     <p>Image : <img src="@Url.Content(String.Format("~/Content/{0}", Model.path))" height="200" width="200" /></p>
+                    <input type="hidden" name="path" value="@Model.path" />
                     <p>Price : <input type="text" class="form-control" id="price" name="price" value="@Model.price" /></p>
                     <p>Description : <textarea rows="5" cols="15" class="form-control" id="description" name="description" value="@Model.description"></textarea></p>
                     <p><input type="submit" class='btn btn-primary btn-lg' value='Save'></p>
