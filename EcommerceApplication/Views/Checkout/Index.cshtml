@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Ecommerce Application";
+}
+
+<div class="jumbotron">
+    <p>Fill the payment information below</p>
+      <form id="checkoutForm">
+            <div class="form-container">
+                <div class="personal-information">
+                    <h1>Payment Information</h1>
+                </div>
+                Total Price : $@Session["Total"].ToString()
+                <input type="text" name="first-name" placeholder="First Name" />
+                <input type="text" name="last-name" placeholder="Surname" />
+                <input type="text" name="number" placeholder="Card Number" />
+                <input type="text" name="expiry" placeholder="MM / YY" />
+                <input type="text" name="cvc" placeholder="CCV" /><br />
+                <div class="card-wrapper"></div>
+                <input type="text" name="streetaddress" required="required" autocomplete="on" maxlength="45" placeholder="Streed Address" />
+                <input type="text" name="city" required="required" autocomplete="on" maxlength="20" placeholder="City" />
+                <input type="text" name="zipcode" required="required" autocomplete="on" pattern="[0-9]*" maxlength="5" placeholder="ZIP code" />
+                <input type="email" name="email" required="required" autocomplete="on" maxlength="40" placeholder="Email" />
+                <input type="text" name="shippingaddress" required="required" autocomplete="on" maxlength="80" placeholder="Full Shipping Address" /><br />
+                <input class="btn btn-primary btn-lg" type="submit" value="Confirm Payment" />&nbsp;<input id="cancelData" class="btn btn-success btn-lg" type="button" value="Cancel" />
+                </div>
+        </form>
+</div>

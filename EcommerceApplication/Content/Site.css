@@ -1,0 +1,43 @@
+﻿body {
+  padding: 60px 0px;
+  background-color: #B2D1E5;
+  margin: 0 auto;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+
+.searchControl {
+    display:inline-block;
+}
+
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+.card-wrapper {
+  padding: 10px 0px;
+  width: 100%;
+}
+
+input[type="text"]{
+  display: block;
+  height: 50px;
+  width: 97%;
+  border: none;
+}
+input[type="email"]{
+  display: block;
+  height: 50px;
+  width: 97%;
+  border: none;
+}
+
+

@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Ecommerce Application";
+}
+
+<div class="jumbotron">
+    <h2>Come Buy With US !!</h2>
+    <p>Click on any categories below or search directly for products in the search box</p>
+ 
+    <div class="searchControl">
+        <input type="text" class="form-control" id="searchProduct" placeholder="Search by product name" />
+    </div>
+    <div class="searchControl">
+       <span class="glyphicon glyphicon-search"></span>
+    </div>
+    <div class="row" id="categoryData">
+
+            @foreach (var result in Model)
+            {
+                <div class="col-md-4">
+                    <h2>@result.name</h2>
+                    <p><a href="@Url.Content(String.Format("~/Category/Lists/{0}", result.categoryId))"><img src="@Url.Content(String.Format("~/Content/images/{0}.jpg", result.categoryId))" height="200" width="200" /></a></p>
+                </div>
+            }
+
+        </div>
+        <div class="row" id="productData"></div>
+    </div>

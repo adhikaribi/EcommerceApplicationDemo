@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Ecommerce Application";
+}
+
+<div class="jumbotron">
+    <a href="~/" class="btn btn-success btn-lg">Home</a>&nbsp<a id="cartNav" href="/Cart/CartDetail" class="btn btn-primary btn-lg">View Cart</a>
+    <p>View product details below</p>
+    <div class="row">
+            <div class="col-md-4">
+                <h2>@Model.name</h2>
+                <p><a href="#"><img src="@Url.Content(String.Format("~/Content/{0}", Model.path))" height="200" width="200" /></a></p>
+                <p>$ @Model.price</p>
+                <p>@Model.description</p>
+                <p><button data-key="@Json.Encode(Model)" class='btn btn-primary btn-lg'>Add To Cart</button>&nbsp<a class='btn btn-success btn-lg' href='@Url.Content(String.Format("~/Product/GetProduct/{0}", Model.productId))'>Update Product</a></p>
+            </div> 
+    </div>
+</div>
